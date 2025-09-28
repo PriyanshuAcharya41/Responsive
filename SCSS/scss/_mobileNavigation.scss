@@ -1,0 +1,55 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.mobile__navigation__bar{
+    height: auto;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    z-index:100;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    @include flex-center;
+    
+    .mobile__navigation__content{
+        @include flex-center;
+        flex-direction: column;
+        width: 100%;
+        ul li{
+            color:$primary;
+            list-style: none;
+            line-height: 2;
+            font-size:1.6rem;
+        }
+
+    }
+    .navRight {
+        margin-right: 3vw;
+        padding-top:2vh;
+        button {
+
+            background: transparent;
+            padding: 2vh 3vw;
+            font-size: 1.6rem;
+            background-color: $primary;
+            color: $white;
+            border-style: none;
+            border-radius: 1em;
+            font-weight: 100;
+            @include bg-transition;
+            
+        }
+        button:hover{
+            background-color: #f0f0f0;
+            color:#C4306B;
+            cursor:pointer;
+        }
+    }
+}
+
+#mobile-nav{
+    display: none;
+}
+#mobile-nav.is-visible {
+  display: block; /* Or flex, grid, etc. */
+}

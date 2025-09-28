@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media(max-width: 988px) {
+    .navbar {
+        position: relative;
+        
+        .navList {
+            display: none;
+        }
+
+        .navRight {
+            
+            position: absolute; // This is good, it creates a positioning context
+            right: 2rem; // Example positioning for the container
+
+            button{
+                width: 2rem;
+                height: 2rem;
+                @include flex-center;
+                h4{
+                    display: none;
+                }
+                &::after{
+                    content: 'X';
+                }
+            }
+
+            
+            // &::after {
+            //     /* 2. ADD THIS - Required for all pseudo-elements */
+            //     content: '';
+                
+            //     /* 3. ADD THIS - To allow top/left positioning */
+            //     position: absolute; 
+                
+            //     height: 50px; /* Using fixed units can be more reliable than vh here */
+            //     width: 50px;
+            //     background-color: red;
+            //     border-radius: 50%;
+            //     left: 4rem;
+            //     top: 10px;
+            // }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+@media(max-width:988px) {
+    .firstPage {
+        margin-top: 2vh;
+
+        .background {
+
+            img {
+                object-fit: cover;
+                height: 70%;
+            }
+        }
+
+        .contents {
+            .firstContent {
+                h1 {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                    padding: 0px 10px;
+                }
+
+                span {
+                    font-size: 1rem;
+                    font-weight: 200;
+                    padding: 0px 20px;
+                    text-align: center;
+                }
+
+                button {
+                    background-color: $primary;
+                    color: white;
+                    padding: 2vh 2vw;
+                    font-size: large;
+                }
+            }
+
+            .secondContent {
+                height: 75vh;
+                width: 100%;
+                flex-direction: column;
+                background-color: white;
+
+                .secondContentLeft {
+                    width: 100%;
+                    height: 50%;
+
+                    img {
+                        object-fit: contain;
+                    }
+                }
+
+                .secondContentRight {
+                    padding: 5px;
+                    height: 80%;
+                    width: 100%;
+                    gap: 0;
+                    background-color: white;
+
+                    h2 {
+                        text-align: left;
+                        font-size: 2rem;
+
+                    }
+
+                    p {
+                        text-align: justify;
+                        font-size: 1.3rem;
+                        padding: 1.1rem 1.3rem;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+}

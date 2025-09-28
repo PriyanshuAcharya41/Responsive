@@ -1,0 +1,11 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media (max-width:988px){
+    .mobile__navigation__bar{
+    display: block;
+    #mobile-nav.is-visible {
+  display: block; /* Or flex, grid, etc. */
+}
+}
+}

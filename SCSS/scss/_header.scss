@@ -1,0 +1,89 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+.navbar{
+    z-index: 10;
+    @include flex-not-justify;
+    justify-content: space-between;
+    padding:4vh 2vw;
+    gap:0.4rem;
+    text-decoration: none;
+    font-size:1rem;
+    background-color: white;
+    @include box-shadow;
+
+    .navLeft{
+        margin-left:1rem;
+        font-size:1.1rem;
+        font-weight: bolder;
+
+    }
+    .navList{
+        @include flex-center;
+        list-style: $none;
+        font-weight: bolder;
+        gap: 2rem;
+        list-style: none;
+        font-weight: bold;
+        li {
+            padding: 0.6em 0.6em;
+            border-radius: 1.1em;
+            transition: ease-in-out 0.4s background-color;
+        }
+
+        li:hover {
+            background-color:$primary;
+            color: $white;
+        }
+
+        #li_anchor {
+            transition: ease-in-out 0.2s background-color;
+            transition: ease-out 0.2s color;
+            a{
+                color:$primary;
+            }
+
+        }
+
+        #li_anchor:hover {
+            background-color: $primary;
+
+            a {
+                color: $white;
+            }
+        }
+        li a{
+            font-size: larger;
+            background-color: transparent;
+            color: #C4306B;
+            font-weight: 100;
+            transition: color ease-out 0.2s;
+        }
+        li a:hover {
+            color: white;
+        }
+    }
+    
+        .navRight {
+        margin-right: 3vw;
+
+        button {
+
+            background: transparent;
+            padding: 1vh 1vw;
+            font-size: 1.2rem;
+            background-color: $primary;
+            color: $white;
+            border-style: none;
+            border-radius: 1em;
+            font-weight: 100;
+            @include bg-transition;
+        }
+        button:hover{
+            background-color: #f0f0f0;
+            color:#C4306B;
+            cursor:pointer;
+        }
+    }
+
+
+}

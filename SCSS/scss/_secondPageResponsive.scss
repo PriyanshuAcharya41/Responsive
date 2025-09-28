@@ -1,0 +1,41 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+@media (max-width:988px){
+    .SecondPage {
+    .SecondPage_main_div{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        .SecondPage_main_div_left{
+            height: auto;
+            width: 100%;
+            padding-top:30%;
+            h1{
+                font-size: 1.9rem;
+                color:$primary;
+            }
+            p{
+                padding: 0.5rem 1.3rem;
+                text-align: justify;
+                font-size: 1.2rem;
+                font-weight: 100;
+            }
+            button {
+                    padding:0.6rem 1rem;
+                    font-size: 1.2rem;
+                    font-weight: 100;
+                    background-color: white;
+                }
+        }
+        .SecondPage_main_div_right{
+            width: 100%;
+            margin-top:1rem;
+            img{
+                object-fit: contain;
+            }
+        }
+    }
+}
+}

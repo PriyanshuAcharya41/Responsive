@@ -1,0 +1,36 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media (max-width:988px) {
+    .FourthPage{
+
+        .FourthPage__content{
+            @include flex-center;
+            gap:0.7vh;
+            .FourthPage__content__upper{
+                height: 50%;
+                padding:2vh 1vw;
+
+                h2{
+                    text-align: center;
+                }
+                p{
+                    padding-left:2rem;
+                    font-size: 1.2rem;
+                }
+            }
+            .FourthPage__content__lower{
+                height: 90%;
+    
+                
+                .marquee__track{
+                    animation: marquee 2s linear infinite;
+                    .FourthPage__content__lower-img{
+                        height: 40%;
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}
